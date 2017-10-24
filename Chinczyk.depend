@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1508862723 source:/home/amayor/programowanie/chinczyk/Chinczyk/main.cpp
+1508864738 source:/home/amayor/programowanie/chinczyk/Chinczyk/main.cpp
 	<iostream>
 	<ncurses.h>
 
