@@ -2,16 +2,16 @@
 #include "Tboard.h"
 #include "ncurses.h"
 
-void keyboard_handling();
+
 
 Tscreen::Tscreen()
 {
     Tboard board;
     board.print_yourself();
-    keyboard_handling();
+    this->keyboard_handling();
 }
 
-void keyboard_handling(){
+void Tscreen::keyboard_handling(){
     noecho();
     curs_set(0);
     keypad(stdscr, true);
