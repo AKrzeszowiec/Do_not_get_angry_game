@@ -1,5 +1,32 @@
 # depslib dependency file v1.0
-1508864738 source:/home/amayor/programowanie/chinczyk/Chinczyk/main.cpp
+1508931368 source:/home/amayor/programowanie/chinczyk/Chinczyk/main.cpp
 	<iostream>
 	<ncurses.h>
+	"Tboard.h"
+	"Tpawn.h"
+	"Tplayer.h"
+	"Tscreen.h"
+
+1508874550 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tboard.cpp
+	"Tboard.h"
+	<ncurses.h>
+
+1508874716 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tboard.h
+
+1508930723 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tpawn.cpp
+	"Tpawn.h"
+
+1508930925 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tpawn.h
+
+1508930994 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tplayer.cpp
+	"Tplayer.h"
+
+1508930994 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tplayer.h
+
+1508931360 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tscreen.cpp
+	"Tscreen.h"
+	"Tboard.h"
+	"ncurses.h"
+
+1508931474 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tscreen.h
 
