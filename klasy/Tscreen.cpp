@@ -1,20 +1,24 @@
 #include "Tscreen.h"
-#include "Tboard.h"
-#include "ncurses.h"
+
 
 
 
 Tscreen::Tscreen()
 {
+    initscr();
+    curs_set(0);
+    noecho();
+    keypad(stdscr, true);
     Tboard board;
+    Tplayer first;
     board.print_yourself();
+
     this->keyboard_handling();
+
 }
 
 void Tscreen::keyboard_handling(){
-    noecho();
-    curs_set(0);
-    keypad(stdscr, true);
+
     bool ending=false;
     while(!ending){
         int c=getch();
@@ -35,4 +39,5 @@ void Tscreen::keyboard_handling(){
     }
     endwin();
 }
+
 

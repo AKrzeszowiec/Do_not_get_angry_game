@@ -1,8 +1,39 @@
 #include "Tboard.h"
 #include <ncurses.h>
 
+
+Tboard::Tboard(){
+    printw("How many players? Choose  2  3  4");
+
+    int pressed_key=1;
+    while(pressed_key!=50&&pressed_key!=51&&pressed_key!=52){
+    noecho();
+    pressed_key=getch();
+    }
+    switch(pressed_key)
+    {
+    case 50:
+    number_of_players=2;
+    break;
+    case 51:
+    number_of_players=3;
+    break;
+    case 52:
+    number_of_players=4;
+    }
+
+    mvprintw(2,10,"%d",number_of_players);
+    mvprintw(4,0,"press any key to continue...");
+    getch();
+    erase();
+}
+
+// 2 - 50
+
+
+
 void Tboard::print_yourself() {
-    initscr();
+
     start_color();
     init_pair(1,COLOR_GREEN,COLOR_BLACK);
     init_pair(2,COLOR_RED,COLOR_BLACK);

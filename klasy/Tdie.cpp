@@ -3,7 +3,7 @@
 Tdie::Tdie(int max_value): max_value(max_value){ }
 
 int Tdie::roll_result(){
-    int result=(rand()%6)+1;
+    int result=(rand()%this->max_value)+1;
     return result;
 }
 
