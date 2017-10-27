@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1509039654 source:/home/amayor/programowanie/chinczyk/Chinczyk/main.cpp
+1509080661 source:/home/amayor/programowanie/chinczyk/Chinczyk/main.cpp
 	<iostream>
 	<ncurses.h>
 	"Tboard.h"
@@ -9,24 +9,29 @@
 	"ctime"
 	"cstdlib"
 
-1509039730 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tboard.cpp
+1509085076 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tboard.cpp
 	"Tboard.h"
 	<ncurses.h>
 
-1509039068 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tboard.h
+1509085147 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tboard.h
 	"Tplayer.h"
+	"Tpawn.h"
+	"../main.h"
 
 1508931760 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tpawn.cpp
 	"Tpawn.h"
 
-1508931760 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tpawn.h
+1509080279 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tpawn.h
+	"Tboard.h"
+	"../main.h"
 
-1509041919 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tplayer.cpp
+1509087171 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tplayer.cpp
 	"Tplayer.h"
 
-1508957920 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tplayer.h
-	<string>
+1509084937 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tplayer.h
 	"ncurses.h"
+	"../main.h"
+	"Tboard.h"
 
 1509042216 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tscreen.cpp
 	"Tscreen.h"
@@ -42,4 +47,6 @@
 	"cstdlib"
 
 1508944741 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tdie.h
+
+1509080171 /home/amayor/programowanie/chinczyk/Chinczyk/main.h
 

@@ -32,7 +32,7 @@ Tboard::Tboard(){
     for (int i=0;i<number_of_players;i++){
     printw("Player %d", i+1);
     move(1,0);
-    players[i]=new Tplayer();
+    players[i]=new Tplayer(this);
     }
 
     getch();

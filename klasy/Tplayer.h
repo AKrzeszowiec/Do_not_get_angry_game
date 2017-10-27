@@ -1,13 +1,17 @@
 #ifndef TPLAYER_H
 #define TPLAYER_H
-#include <string>
 #include "ncurses.h"
-using namespace std;
+#include "../main.h"
+#include "Tboard.h"
+
+class Tboard;
+
 class Tplayer
 {
     public:
-        Tplayer();
+        Tplayer(Tboard *whichboard);
         char* name;
+        color player_color;
     protected:
     private:
 };
