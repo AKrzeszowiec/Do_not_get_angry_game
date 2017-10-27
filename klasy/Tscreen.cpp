@@ -10,7 +10,6 @@ Tscreen::Tscreen()
     noecho();
     keypad(stdscr, true);
     Tboard board;
-    Tplayer first;
     board.print_yourself();
 
     this->keyboard_handling();

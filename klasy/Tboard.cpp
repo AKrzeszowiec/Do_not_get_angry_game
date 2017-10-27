@@ -3,6 +3,9 @@
 
 
 Tboard::Tboard(){
+    //int dupa=getch();
+    //printw("%d", dupa);
+    //getch();
     printw("How many players? Choose  2  3  4");
 
     int pressed_key=1;
@@ -21,9 +24,17 @@ Tboard::Tboard(){
     case 52:
     number_of_players=4;
     }
-
     mvprintw(2,10,"%d",number_of_players);
     mvprintw(4,0,"press any key to continue...");
+    getch();
+    erase();
+    Tplayer* players[number_of_players];
+    for (int i=0;i<number_of_players;i++){
+    printw("Player %d", i+1);
+    move(1,0);
+    players[i]=new Tplayer();
+    }
+
     getch();
     erase();
 }
