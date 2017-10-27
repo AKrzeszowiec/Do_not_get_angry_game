@@ -6,6 +6,13 @@ class Tscreen;
 class Tboard;
 class Tdie;
 
+class Tcoord {
+public:
+    int x;
+    int y;
+    Tcoord(int x, int y) : x(x), y(y) {}
+};
+
 enum color {
 red,
 blue,

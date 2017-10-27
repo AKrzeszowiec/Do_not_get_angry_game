@@ -6,12 +6,7 @@
 
 
 
-class Tcoord {
-public:
-    int x;
-    int y;
-    Tcoord(int x, int y) : x(x), y(y) {}
-};
+class Tcoord;
 
 class Tboard
 {

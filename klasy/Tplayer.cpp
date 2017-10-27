@@ -54,6 +54,6 @@ Tplayer::Tplayer(Tboard *board){
         }
     }
     for(int i=0; i<4; i++) {
-//        pawns[i]=new Tpawn(player_color,i);
+        pawns[i]=new Tpawn(player_color,static_cast<pawn_nr>(i));
     }
 }
