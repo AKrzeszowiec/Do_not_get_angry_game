@@ -14,8 +14,6 @@ class Tpawn
 {
     public:
     Tpawn();
-
-
     color pawn_color;
     pawn_nr name;
     protected:

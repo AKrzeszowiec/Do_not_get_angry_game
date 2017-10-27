@@ -3,10 +3,8 @@
 Tplayer::Tplayer(Tboard *board){
     printw("Your name: ");
     echo();
-    char temporary_name[21];
     char* printable_color;
-    getnstr(temporary_name,20);
-    name=temporary_name;
+    getnstr(name,20);
     mvprintw(2,10,"%s",name);
     erase();
     noecho();

@@ -3,14 +3,16 @@
 #include "ncurses.h"
 #include "../main.h"
 #include "Tboard.h"
+#include "Tpawn.h"
 
 class Tboard;
+class Tpawn;
 
 class Tplayer
 {
     public:
         Tplayer(Tboard *whichboard);
-        char* name;
+        char name[21];
         color player_color;
     protected:
     private:

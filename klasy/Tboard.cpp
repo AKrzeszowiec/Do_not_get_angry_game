@@ -28,12 +28,12 @@ Tboard::Tboard(){
     mvprintw(4,0,"press any key to continue...");
     getch();
     erase();
-    Tplayer* players[number_of_players];
     for (int i=0;i<number_of_players;i++){
     printw("Player %d", i+1);
     move(1,0);
     players[i]=new Tplayer(this);
     }
+    mvprintw(20,20,"%s",players[1]->name);
 
     getch();
     erase();
