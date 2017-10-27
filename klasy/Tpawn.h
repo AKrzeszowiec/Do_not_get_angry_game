@@ -13,9 +13,11 @@ enum pawn_nr {
 class Tpawn
 {
     public:
-    Tpawn();
+    Tpawn(color pawn_color,pawn_nr name);
     color pawn_color;
     pawn_nr name;
+    bool on_board;
+    int position;
     protected:
     private:
 

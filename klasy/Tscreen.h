@@ -3,9 +3,6 @@
 #include "Tboard.h"
 #include "Tplayer.h"
 #include "ncurses.h"
-#include <string>
-
-using namespace std;
 
 class Tscreen
 {

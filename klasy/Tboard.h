@@ -3,7 +3,8 @@
 #include "Tplayer.h"
 #include "Tpawn.h"
 #include "../main.h"
-class Tplayer;
+
+
 
 class Tcoord {
 public:

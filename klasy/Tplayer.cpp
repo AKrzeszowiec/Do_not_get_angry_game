@@ -1,15 +1,16 @@
 #include "Tplayer.h"
 
+
 Tplayer::Tplayer(Tboard *board){
     printw("Your name: ");
     echo();
-    char* printable_color;
     getnstr(name,20);
     mvprintw(2,10,"%s",name);
     erase();
     noecho();
 
 // choosing the colour of the player
+    std::string printable_color;
     int run_choosing_color=1;
     while(run_choosing_color){
         printw("%s choose your colour.",name);
@@ -41,7 +42,8 @@ Tplayer::Tplayer(Tboard *board){
         if((board->chosen_colors[player_color])==0){
             board->chosen_colors[player_color]=1;
             run_choosing_color=0;
-            mvprintw(3,10,"%s",printable_color);
+            const char* cstr=printable_color.c_str();
+            mvprintw(3,10,"%s",cstr);
             getch();
             erase();
         }
@@ -51,5 +53,7 @@ Tplayer::Tplayer(Tboard *board){
             erase();
         }
     }
+    for(int i=0; i<4; i++) {
+//        pawns[i]=new Tpawn(player_color,i);
+    }
 }
-

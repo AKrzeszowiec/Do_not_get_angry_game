@@ -4,9 +4,10 @@
 #include "../main.h"
 #include "Tboard.h"
 #include "Tpawn.h"
+#include <cstring>
+#include <string>
 
-class Tboard;
-class Tpawn;
+
 
 class Tplayer
 {
@@ -14,6 +15,7 @@ class Tplayer
         Tplayer(Tboard *whichboard);
         char name[21];
         color player_color;
+        Tpawn* pawns[4];
     protected:
     private:
 };

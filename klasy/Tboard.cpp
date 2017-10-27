@@ -33,7 +33,6 @@ Tboard::Tboard(){
     move(1,0);
     players[i]=new Tplayer(this);
     }
-    mvprintw(20,20,"%s",players[1]->name);
 
     getch();
     erase();
