@@ -60,9 +60,11 @@ Tplayer::Tplayer(Tboard *board){
 
 Tpawn* Tplayer::pawn_choosing() {
     bool ending=false;
-    Tpawn* temporary_pawn=pawns[0];
+    int which_pawn=0;
+    Tpawn* temporary_pawn=pawns[which_pawn];
     temporary_pawn->highlight=true;
     temporary_pawn->print_yourself();
+    temporary_pawn->highlight=false;
     while(!ending){
         int c=getch();
         switch(c)
@@ -70,18 +72,28 @@ Tpawn* Tplayer::pawn_choosing() {
         case 27: //esc
             ending=true;
             break;
-        case 4: //left arrow
+        case 260: //left arrow
+            which_pawn=which_pawn-1;
+            if(which_pawn<0){which_pawn=3;}
             break;
-        case 5: //right arrow
+        case 261: //right arrow
+            which_pawn=(which_pawn+1)%4;
             break;
-        case 3: //up arrow
+            /*
+        case 259: //up arrow
             break;
         case 2: //down arrow
             break;
+            */
         case 10: //enter
             ending=true;
             break;
         }
+        temporary_pawn->print_yourself();
+        temporary_pawn=pawns[which_pawn];
+        temporary_pawn->highlight=true;
+        temporary_pawn->print_yourself();
+        temporary_pawn->highlight=false;
     }
-
+    return temporary_pawn;
 }

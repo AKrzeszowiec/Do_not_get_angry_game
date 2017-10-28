@@ -13,6 +13,14 @@ public:
     Tcoord(int x, int y) : x(x), y(y) {}
 };
 
+extern const Tcoord play_fields[40];
+extern const Tcoord green_base[4];
+extern const Tcoord red_base[4];
+extern const Tcoord blue_base[4];
+extern const Tcoord yellow_base[4];
+extern const Tcoord (*bases_list[4])[4];
+
+
 enum color {
 red,
 blue,

@@ -100,6 +100,14 @@ void Tboard::player_choosing(){
         int roll_result=die->roll_result();
         mvprintw(5,26,"%d",roll_result);
         Tpawn* temporary_pawn=players[i]->pawn_choosing();
+        *temporary_pawn=*temporary_pawn+roll_result;
+        erase();
+        this->print_yourself();
+        for(int j=0;j<number_of_players;j++){
+            for(int t=0;t<4;t++){
+                players[j]->pawns[t]->print_yourself();
+            }
+        }
 
     }
 
