@@ -96,18 +96,24 @@ void Tboard::print_yourself() {
 
 void Tboard::player_choosing(){
     for(int i=0;;i++) {
-        i=i%number_of_players;
-        int roll_result=die->roll_result();
-        mvprintw(5,26,"%d",roll_result);
-        Tpawn* temporary_pawn=players[i]->pawn_choosing();
-        *temporary_pawn=*temporary_pawn+roll_result;
-        erase();
         this->print_yourself();
         for(int j=0;j<number_of_players;j++){
             for(int t=0;t<4;t++){
                 players[j]->pawns[t]->print_yourself();
             }
         }
+        i=i%number_of_players;
+        int roll_result=die->roll_result();
+        mvprintw(5,26,"%d",roll_result);
+        Tpawn* temporary_pawn=players[i]->pawn_choosing(roll_result);
+        if(temporary_pawn==NULL){
+            mvprintw(20,0,"no possible movement!");
+            getch();
+        }
+        else{
+        *temporary_pawn=*temporary_pawn+roll_result;
+        }
+        erase();
 
     }
 

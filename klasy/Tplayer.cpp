@@ -58,42 +58,68 @@ Tplayer::Tplayer(Tboard *board){
     }
 }
 
-Tpawn* Tplayer::pawn_choosing() {
+Tpawn* Tplayer::pawn_choosing(int roll_result) {
+    Tpawn* temporary_pawn;
+    bool is_six=false;
+    bool exists_playable_pawn=false;
+    if(roll_result==6){
+        is_six=true;
+    }
     bool ending=false;
     int which_pawn=0;
-    Tpawn* temporary_pawn=pawns[which_pawn];
-    temporary_pawn->highlight=true;
-    temporary_pawn->print_yourself();
-    temporary_pawn->highlight=false;
-    while(!ending){
-        int c=getch();
-        switch(c)
-        {
-        case 27: //esc
-            ending=true;
-            break;
-        case 260: //left arrow
-            which_pawn=which_pawn-1;
-            if(which_pawn<0){which_pawn=3;}
-            break;
-        case 261: //right arrow
-            which_pawn=(which_pawn+1)%4;
-            break;
-            /*
-        case 259: //up arrow
-            break;
-        case 2: //down arrow
-            break;
-            */
-        case 10: //enter
-            ending=true;
-            break;
+    if(!is_six){
+        for(int i=0;i<4;i++){
+            if(pawns[i]->on_board&&!pawns[i]->in_base){
+                exists_playable_pawn=true;
+            }
         }
-        temporary_pawn->print_yourself();
+    }
+    if(is_six||exists_playable_pawn){
+        while((!is_six&&!pawns[which_pawn]->on_board)||pawns[which_pawn]->in_base){
+            which_pawn++;
+        }
         temporary_pawn=pawns[which_pawn];
         temporary_pawn->highlight=true;
         temporary_pawn->print_yourself();
         temporary_pawn->highlight=false;
+        while(!ending){
+            int c=getch();
+            switch(c)
+            {
+            case 27: //esc
+                ending=true;
+                break;
+            case 260: //left arrow
+                do{
+                which_pawn=which_pawn-1;
+                if(which_pawn<0){which_pawn=3;}
+                }while((!is_six&&!pawns[which_pawn]->on_board)||pawns[which_pawn]->in_base);
+                break;
+            case 261: //right arrow
+                do{
+                which_pawn=(which_pawn+1)%4;
+                }while((!is_six&&!pawns[which_pawn]->on_board)||pawns[which_pawn]->in_base);
+                break;
+                /*
+            case 259: //up arrow
+                break;
+            case 2: //down arrow
+                break;
+                */
+            case 10: //enter
+                ending=true;
+                break;
+            }
+            temporary_pawn->print_yourself();
+            temporary_pawn=pawns[which_pawn];
+            temporary_pawn->highlight=true;
+            temporary_pawn->print_yourself();
+            temporary_pawn->highlight=false;
+        }
+
+    }
+    else{
+        temporary_pawn=NULL;
     }
     return temporary_pawn;
 }
