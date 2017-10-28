@@ -16,6 +16,7 @@ class Tplayer
         char name[21];
         color player_color;
         Tpawn* pawns[4];
+        Tpawn* pawn_choosing();
     protected:
     private:
 };

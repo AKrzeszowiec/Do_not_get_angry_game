@@ -7,7 +7,7 @@ Tpawn::Tpawn(color pawn_color, pawn_nr name): pawn_color(pawn_color), name(name)
 
 void Tpawn::print_yourself() {
     int x,y;
-    Tcoord possible_start_locations[4]={Tcoord(0,0),Tcoord(0,2),Tcoord(1,0),Tcoord(1,2)};
+    Tcoord wait_locations[4]={Tcoord(0,0),Tcoord(0,2),Tcoord(1,0),Tcoord(1,2)};
     if(!on_board){
         switch (pawn_color)
         {
@@ -27,10 +27,17 @@ void Tpawn::print_yourself() {
         x=0;
         y=18;
         }
-        x+=possible_start_locations[name].x;
-        y+=possible_start_locations[name].y;
+        x+=wait_locations[name].x;
+        y+=wait_locations[name].y;
         attron(COLOR_PAIR(pawn_color+1));
-        mvprintw(x,y,"O");
+        if (this->highlight){
+            attron(A_BOLD);
+            mvprintw(x,y,"O");
+            attroff(A_BOLD);
+        }
+        else {
+            mvprintw(x,y,"O");
+        }
         attroff(COLOR_PAIR(pawn_color+1));
     }
     else {

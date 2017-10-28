@@ -57,3 +57,31 @@ Tplayer::Tplayer(Tboard *board){
         pawns[i]=new Tpawn(player_color,static_cast<pawn_nr>(i));
     }
 }
+
+Tpawn* Tplayer::pawn_choosing() {
+    bool ending=false;
+    Tpawn* temporary_pawn=pawns[0];
+    temporary_pawn->highlight=true;
+    temporary_pawn->print_yourself();
+    while(!ending){
+        int c=getch();
+        switch(c)
+        {
+        case 27: //esc
+            ending=true;
+            break;
+        case 4: //left arrow
+            break;
+        case 5: //right arrow
+            break;
+        case 3: //up arrow
+            break;
+        case 2: //down arrow
+            break;
+        case 10: //enter
+            ending=true;
+            break;
+        }
+    }
+
+}

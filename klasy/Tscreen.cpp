@@ -21,11 +21,12 @@ Tscreen::Tscreen()
             board.players[i]->pawns[j]->print_yourself();
         }
     }
-    this->keyboard_handling();
+    board.player_choosing();
+    endwin();
 
 }
 
-void Tscreen::keyboard_handling(){
+void Tscreen::keyboard_handling(){ // prawdopodobnie do usunięcia!
 
     bool ending=false;
     while(!ending){

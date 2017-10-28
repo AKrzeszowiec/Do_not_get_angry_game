@@ -6,6 +6,7 @@ Tboard::Tboard(){
     //int dupa=getch();
     //printw("%d", dupa);
     //getch();
+    die=new Tdie();
     printw("How many players? Choose  2  3  4");
 
     int pressed_key=1;
@@ -90,4 +91,16 @@ void Tboard::print_yourself() {
         mvaddch(yellow_base[i].x,yellow_base[i].y,'o');
         attroff(COLOR_PAIR(yellow+1));
     }
+}
+
+
+void Tboard::player_choosing(){
+    for(int i=0;;i++) {
+        i=i%number_of_players;
+        int roll_result=die->roll_result();
+        mvprintw(5,26,"%d",roll_result);
+        Tpawn* temporary_pawn=players[i]->pawn_choosing();
+
+    }
+
 }

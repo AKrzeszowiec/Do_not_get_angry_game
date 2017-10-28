@@ -16,6 +16,7 @@ class Tpawn
     Tpawn(color pawn_color,pawn_nr name);
     color pawn_color;
     pawn_nr name;
+    bool highlight;
     void print_yourself();
     bool on_board;
     int position;

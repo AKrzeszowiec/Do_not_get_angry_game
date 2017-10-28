@@ -7,9 +7,10 @@ class Tdie
     public:
         Tdie(int=6);
         int max_value;
+        int roll_result();
     protected:
     private:
-        int roll_result();
+
 };
 
 #endif // TDIE_H

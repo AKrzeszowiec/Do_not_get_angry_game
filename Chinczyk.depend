@@ -9,26 +9,27 @@
 	"ctime"
 	"cstdlib"
 
-1509132450 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tboard.cpp
+1509175218 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tboard.cpp
 	"Tboard.h"
 	<ncurses.h>
 
-1509131088 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tboard.h
+1509173926 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tboard.h
 	"Tplayer.h"
 	"Tpawn.h"
 	"../main.h"
+	"Tdie.h"
 
-1509132102 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tpawn.cpp
+1509175299 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tpawn.cpp
 	"Tpawn.h"
 
-1509130374 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tpawn.h
+1509174667 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tpawn.h
 	"Tboard.h"
 	"../main.h"
 
-1509130374 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tplayer.cpp
+1509174937 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tplayer.cpp
 	"Tplayer.h"
 
-1509127600 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tplayer.h
+1509172749 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tplayer.h
 	"ncurses.h"
 	"../main.h"
 	"Tboard.h"
@@ -36,7 +37,7 @@
 	<cstring>
 	<string>
 
-1509132361 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tscreen.cpp
+1509175060 source:/home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tscreen.cpp
 	"Tscreen.h"
 
 1509102852 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tscreen.h
@@ -48,7 +49,7 @@
 	"Tdie.h"
 	"cstdlib"
 
-1508944741 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tdie.h
+1509173955 /home/amayor/programowanie/chinczyk/Chinczyk/klasy/Tdie.h
 
 1509131087 /home/amayor/programowanie/chinczyk/Chinczyk/main.h
 
