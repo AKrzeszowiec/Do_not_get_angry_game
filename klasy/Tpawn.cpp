@@ -60,7 +60,7 @@ void Tpawn::print_yourself() {
 
 Tpawn Tpawn::operator+(int digit){
     if(this->on_board){
-        if (fields_passed+digit>40){
+        if (fields_passed+digit>39){
             this->in_base=true;
         }
         else {
