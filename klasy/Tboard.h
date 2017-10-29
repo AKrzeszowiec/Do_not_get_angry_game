@@ -17,9 +17,10 @@ public:
     void print_yourself();
     int chosen_colors[4]={0,0,0,0};
     Tplayer* players[4];
-    void player_choosing();
     Tdie* die;
-private:
+    Tpawn* fields_with_pawns[40];
+
+    void player_choosing();
 
 };
 

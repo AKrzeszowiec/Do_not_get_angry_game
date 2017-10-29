@@ -5,48 +5,17 @@
 
 Tscreen::Tscreen()
 {
-    initscr();
-    curs_set(0);
+    initscr(); //ncurses stuff needed to initialize the screen
+    curs_set(0); //making the cursor disappear
     noecho();
-    start_color();
+    start_color(); //we'll wabt to use colour for sure, so we initialize some colours
     init_pair(green+1,COLOR_GREEN,COLOR_BLACK);
     init_pair(red+1,COLOR_RED,COLOR_BLACK);
     init_pair(blue+1,COLOR_BLUE,COLOR_BLACK);
     init_pair(yellow+1,COLOR_YELLOW,COLOR_BLACK);
     keypad(stdscr, true);
-    Tboard board;
-    board.print_yourself();
-    for(int i=0;i<board.number_of_players;i++){
-        for(int j=0; j<4; j++){
-            board.players[i]->pawns[j]->print_yourself();
-        }
-    }
-    board.player_choosing();
+    Tboard board; //we generate a new board, which in turn will initialize players and pawns
+    board.player_choosing(); //the function used to jump between players and let them play their turns
     endwin();
 
 }
-
-void Tscreen::keyboard_handling(){ // prawdopodobnie do usunięcia!
-
-    bool ending=false;
-    while(!ending){
-        int c=getch();
-        switch(c)
-        {
-        case 27: //esc
-            ending=true;
-            break;
-        case 4: //left arrow
-            break;
-        case 5: //right arrow
-            break;
-        case 3: //up arrow
-            break;
-        case 2: //down arrow
-            break;
-        }
-    }
-    endwin();
-}
-
-

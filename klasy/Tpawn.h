@@ -15,15 +15,18 @@ class Tpawn
     public:
     color pawn_color;
     pawn_nr name;
+    Tboard *board;
     bool highlight;
     bool on_board;
     int start_position;
     int fields_passed;
     bool in_base;
 
-    Tpawn(color pawn_color, pawn_nr name);
+
+    Tpawn(color pawn_color, pawn_nr name, Tboard* board);
     void print_yourself();
-    Tpawn operator+(int digit);
+    bool operator+(int digit);
+    void kill_yourself();
     protected:
     private:
 

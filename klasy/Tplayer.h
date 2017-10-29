@@ -12,7 +12,9 @@
 class Tplayer
 {
     public:
-        Tplayer(Tboard *whichboard);
+        int pawns_in_base;
+        Tplayer(Tboard *board);
+        Tboard *board;
         char name[21];
         color player_color;
         Tpawn* pawns[4];

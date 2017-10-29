@@ -5,7 +5,7 @@
 class Tdie
 {
     public:
-        Tdie(int=6);
+        Tdie(int max_value=6);
         int max_value;
         int roll_result();
     protected:
